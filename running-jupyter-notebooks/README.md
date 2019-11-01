@@ -22,7 +22,7 @@ VENVS_LOC=/extra/$NETID/venvs
 mkdir $VENVS_LOC
 
 # 1. create the environment
-virtualenv --python=python3.5 $VENVS_LOC/$VENV_NAME
+virtualenv --python=python3.6 --system-site-packages $VENVS_LOC/$VENV_NAME
 
 # 2. activate our environment
 source $VENVS_LOC/$VENV_NAME/bin/activate
