@@ -1,0 +1,28 @@
+#!/usr/bin/env bash
+
+# the name of your job
+#PBS -N my-first-pbs-job
+
+# the group to which the hours should be charged
+#PBS -W group_list=ua-hlt
+
+# The queue on which to run your job.
+# standard -> limited hrs/mo
+# windfall -> unlimited
+#PBS -q standard
+
+# email when/if job aborts, begins, and ends
+#PBS -m abe
+# NOTE: With UA HPC, you can only use your UA email
+#PBS -M hahnpowell@email.arizona.edu
+
+# ncpus -> the number of CPUs requested
+# mem -> the total amount of RAM requested
+# pcmem -> the RAM allocation per CPU (can't change this)
+#PBS -l select=1:ncpus=1:mem=6gb:pcmem=6gb
+
+# run a max of 10 min.
+#PBS -l walltime=00:10:00	
+
+echo "Hello HPC!"
+
